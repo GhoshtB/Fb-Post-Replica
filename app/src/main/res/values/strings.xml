@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application Example</string>
+    <string name="post_name">Post</string>
+    <string name="post_det">post details</string>
+    <string name="like">15 likes</string>
+    <string name="comments">60 comments . 391 shares</string>
+</resources>

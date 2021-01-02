@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/padd_3"
+    app:contentPadding="@dimen/padd_3"
+    android:layout_margin="@dimen/padd_5">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintVertical_bias="0.0">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+              <ImageView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:padding="@dimen/padd_5"
+                  android:src="@drawable/ic_baseline_person" />
+
+              <TextView
+                  android:id="@+id/tvpostName"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:padding="@dimen/padd_5"
+                  android:textColor="@color/black"
+                  android:text="@string/post_name"
+                  android:textSize="@dimen/text_lrg"
+                  android:textStyle="bold" />
+
+          </LinearLayout>
+
+          <TextView
+              android:id="@+id/tvpost_det"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="start"
+              android:padding="@dimen/padd_10"
+              android:text="@string/post_det"
+              android:textColor="@color/black"
+              android:textSize="@dimen/text_medm"
+              android:textStyle="normal" />
+
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/padd_5"
+              android:src="@drawable/instagram" />
+
+          <RelativeLayout
+              android:id="@+id/rlComment"
+              android:padding="@dimen/padd_5"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <TextView
+                  android:layout_alignParentStart="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="start|center"
+                  android:layout_centerVertical="true"
+                  android:padding="@dimen/padd_5"
+                  android:text="@string/like"
+                  android:textColor="@color/black"
+                  android:textSize="@dimen/text_small"
+                  android:textStyle="normal"
+                  android:gravity="center"
+                  android:drawablePadding="@dimen/padd_10"
+                  android:drawableLeft="@drawable/ic_laughing"/>
+
+              <TextView
+                  android:id="@+id/tvcmntsshrs"
+                  android:layout_alignParentEnd="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="start"
+                  android:padding="@dimen/padd_10"
+                  android:layout_centerVertical="true"
+                  android:text="@string/comments"
+                  android:textColor="@color/black"
+                  android:textSize="@dimen/text_small"
+                  android:textStyle="normal"
+                  android:gravity="center" />
+          </RelativeLayout>
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/padd_1"
+              android:background="@android:color/darker_gray"/>
+
+          <LinearLayout
+              android:id="@+id/llOthers"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:weightSum="3"
+              >
+
+              <TextView
+                  android:id="@+id/tvlike"
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:padding="@dimen/padd_5"
+                  android:text="like"
+                  android:textColor="@color/black"
+                  android:textSize="@dimen/text_small"
+                  android:textStyle="normal"
+                  android:gravity="center"
+                  android:maxLines="1"
+                  android:drawablePadding="@dimen/padd_5"
+                  android:drawableLeft="@drawable/ic_like"/>
+
+              <TextView
+                  android:id="@+id/tvcmnts"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_weight="1"
+                  android:drawableLeft="@drawable/ic_comment"
+                  android:drawablePadding="@dimen/padd_5"
+                  android:gravity="center_vertical"
+                  android:padding="@dimen/padd_5"
+                  android:text="Comment"
+                  android:maxLines="1"
+                  android:textColor="@color/black"
+                  android:textSize="@dimen/text_small"
+                  android:textStyle="normal" />
+
+              <TextView
+                  android:id="@+id/tvShares"
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:padding="@dimen/padd_5"
+                  android:text="Share"
+                  android:textColor="@color/black"
+                  android:textSize="@dimen/text_small"
+                  android:textStyle="normal"
+                  android:gravity="center_vertical"
+                  android:maxLines="1"
+                  android:drawablePadding="@dimen/padd_5"
+                  android:drawableLeft="@drawable/ic_share"/>
+
+          </LinearLayout>
+      </LinearLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

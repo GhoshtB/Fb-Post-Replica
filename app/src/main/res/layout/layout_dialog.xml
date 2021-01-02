@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_margin="@dimen/padd_5"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:orientation="horizontal"
+        android:padding="@dimen/padd_5">
+        <TextView
+            android:layout_alignParentStart="true"
+            android:id="@+id/tvComment"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:padding="@dimen/padd_5"
+            android:text="like"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_small"
+            android:textStyle="normal"
+            android:gravity="start"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:drawablePadding="@dimen/padd_5" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_like"
+        android:layout_alignParentEnd="true"
+        />
+    </RelativeLayout>
+    <View
+        android:layout_below="@id/linearLayout"
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/padd_1"
+        android:background="@android:color/darker_gray"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvComments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padd_5"
+            android:nestedScrollingEnabled="false" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/padd_5">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padd_1"
+            android:background="@android:color/darker_gray"/>
+        
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Write a Comment"
+            android:gravity="center"
+            android:padding="@dimen/padd_5"
+            android:background="@drawable/rect_grey"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
